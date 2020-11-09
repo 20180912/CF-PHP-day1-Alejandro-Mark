@@ -18,28 +18,37 @@
   </head>
   <body>
     <div class="container">
+    <h2 class="text-center mt-3">Vehicles for sale</h2>
         <div class="row">
     <?php
             $vehicles = array (
                 "Vehicle1" => array (
                     "model" => "Model 1",
                     "availability" => false,
-                    "img" => "img/vehicle1.jpg"
+                    "img" => "img/vehicle1.jpg",
+                    "horsepower" => 300,
+                    "seats" => 4
                 ), 
                 "Vehicle2" => array (
                     "model" => "Model 2",
                     "availability" => true,
-                    "img" => "img/vehicle2.jpg"
+                    "img" => "img/vehicle2.jpg",
+                    "horsepower" => 300,
+                    "seats" => 4
                 ),
                 "Vehicle3" => array (
                     "model" => "Model 3",
                     "availability" => false,
-                    "img" => "img/vehicle3.jpg"
+                    "img" => "img/vehicle3.jpg",
+                    "horsepower" => 300,
+                    "seats" => 4
                 ),
                 "Vehicle4" => array (
                     "model" => "Model 4",
                     "availability" => true,
-                    "img" => "img/vehicle4.jpg"
+                    "img" => "img/vehicle4.jpg",
+                    "horsepower" => 300,
+                    "seats" => 4
                 )
             );
         foreach ($vehicles as $key) {
@@ -49,11 +58,13 @@
                 <img class='card-img' src='$key[img]'>
                     <div class='text-center card-body'>
                         <h5 class='card-title'>$key[model]</h5>
+                        <ul class='text-left'>
+                            <li>Horsepower = $key[horsepower]</li>
+                            <li>Seats = $key[seats]</li>
+                        </ul>
                     </div>
-                <div class='card-footer'><p class='h6 text-success text-center'>Price: wedontknowyet</p></div>
-            </div>
-        </div>
-        ";
+            ";
+            echo "<div class='card-footer'><p class='h6 ", ($key['availability'] ? "text-success text-center'>Price: wedontknowyet</p></div></div></div>" : "text-danger text-center'>Price: wedontknowyet</p></div></div></div>");
         }
     ?>
         </div>

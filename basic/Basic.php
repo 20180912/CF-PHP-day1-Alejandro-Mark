@@ -18,7 +18,6 @@
     <!-- Exercise 1 -->
     <h2 class="text-center">
         <?php
-
             $name = "Mark";
             echo $name;        
         ?>
@@ -38,23 +37,23 @@
     <!-- Exercise 3 -->
 
     <?php
-        $current_day = "Monday";
+        $current_day = "Wednesday";
         if ($current_day == "Monday") {
             echo "Today is $current_day <br>";
         } else if ($current_day == "Tuesday")
             echo "Today is $current_day! <br>";
         else
-        echo "leave me alone <br>";  
+        echo "Today is $current_day <br>";  
     ?>
 
     <!-- Exercise 4 -->
     <?php
-        for ($i=0; $i < 5; $i++) { 
-            echo "Alejandro <br>";
-        }
+        // for ($i=0; $i < 5; $i++) { 
+        //     echo "Alejandro <br>";
+        // }
 
         $a = 0;
-        while ($a < 10) {
+        while ($a < 0) {
             echo "Mark <br>";
             $a++;
         }
@@ -63,14 +62,15 @@
         do {
             echo "Alejandro <br>";
             $b ++;
-        } while ($b < 10);
+        } while ($b < 0);
     ?>
 
     <!-- Exercise 5 -->
     <?php
         $numbers = array(0,1,2,3,4,5,6,7,8,9);
         foreach ($numbers as $value) {
-            echo $value;
+            echo "$value <br>";
+
         }
     ?>
 

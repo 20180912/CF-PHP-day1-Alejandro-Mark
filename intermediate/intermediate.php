@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-4 mx-auto text-center">
         <?php 
-        $temperature = 33;
+        $temperature = 65;
         $temperature = convertToCelsius($temperature);
         switch ($temperature) {
             case ($temperature > 0 && $temperature < 6) :
@@ -46,8 +46,8 @@
 
         function convertToCelsius($var)
         {
-            $var = ($var - 32) * 5/9; 
-            return $var;
+            $celsius = ($var - 32) * 5/9; 
+            return $celsius;
         }
         ?>
             </div>

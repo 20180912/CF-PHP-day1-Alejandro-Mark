@@ -33,22 +33,29 @@
                     "model" => "Model 2",
                     "availability" => true,
                     "img" => "img/vehicle2.jpg",
-                    "horsepower" => 300,
+                    "horsepower" => 500,
                     "seats" => 4
                 ),
                 "Vehicle3" => array (
                     "model" => "Model 3",
                     "availability" => false,
                     "img" => "img/vehicle3.jpg",
-                    "horsepower" => 300,
-                    "seats" => 4
+                    "horsepower" => 650,
+                    "seats" => 2
                 ),
                 "Vehicle4" => array (
                     "model" => "Model 4",
                     "availability" => true,
                     "img" => "img/vehicle4.jpg",
-                    "horsepower" => 300,
+                    "horsepower" => 250,
                     "seats" => 4
+                ),
+                "Vehicle5" => array (
+                    "model" => "Model 5",
+                    "availability" => true,
+                    "img" => "img/vehicle5.jpg",
+                    "horsepower" => 550,
+                    "seats" => 1
                 )
             );
         foreach ($vehicles as $key) {
@@ -64,7 +71,7 @@
                         </ul>
                     </div>
             ";
-            echo "<div class='card-footer'><p class='h6 ", ($key['availability'] ? "text-success text-center'>Price: wedontknowyet</p></div></div></div>" : "text-danger text-center'>Price: wedontknowyet</p></div></div></div>");
+            echo "<div class='card-footer'><p class='h6 ", ($key['availability'] ? "text-success text-center'>Price: a lot</p></div></div></div>" : "text-danger text-center'>Price: not available</p></div></div></div>");
         }
     ?>
         </div>
